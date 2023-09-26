@@ -152,7 +152,7 @@ $$J(\Theta) = - {1 \over m} \sum_{i=1}^n {y^{(i)} log(\hat p^{(i)}) + (1 - y^{(i
 이는 샘플X가 주어지면 각 클래스K에 대한 점수를 계산하고 그 점수에 소프트맥스함수를 적용하여 각 클래스의 확률을 추정한다.
 
 $$ 
-(소프트맥스 함수) = \frac {e^{s_k(x)}}{ \sum {e^{s_k(x)}} } , \quad s_k(x) = (\Theta^{(k)})^T x
+(소프트맥스 함수) = \frac {e^{s_k(x)}}{ \sum\limits_{j=1}^{K} {e^{s_k(x)}} } , \quad s_k(x) = (\Theta^{(k)})^T x
 $$
 
 
