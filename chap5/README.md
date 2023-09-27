@@ -11,6 +11,12 @@ svm에서 분류기의 결정 경계는 무수히 많이 고를 수 있다.
    단점 : 데이터가 선형적으로 구분이 될 수 있어야 하고, 이상치에 매우 민감하게 반응한다.
    
 이런 문제를 해결하기 위해 조금 더 유연한 소프트 마진 분류를 사용해야한다.
+
+ 하드 마진의 목적함수 : $\underset{w, b}{minimize}\quad{\frac{1}{2}w^T w}$  
+ 조건 : $\quad t^{(i)}(w^T x^{(i)} + b) \ge 1 \quad for \quad i = 1, 2, \dots, m$
+
+ 소프트 마진의 목적함수 : $\underset{w, b, \zeta}{minimize}\quad{\dfrac{1}{2}w^T w + C\sum\limits_{i=1}^m{\zeta^{(i)}}}$  
+ 조건 : $t^{(i)}(w^T x^{(i)} + b) \ge 1 - \zeta^{(i)} \quad and \quad \zeta^{(i)} \ge 0 \quad for \quad i = 1, 2, \dots, m$
    
 svm에서 C 매개변수는 모델의 정규화를 조절하는 역할을 한다.
 
